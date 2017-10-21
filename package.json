@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "goldyga-portfolio",
+  "main": "portfolio.js",
+  "scripts": {
+    "test": "gp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Goldyga/goldyga.github.io.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Marcin Gołdyga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Goldyga/goldyga.github.io/issues"
+  },
+  "homepage": "https://github.com/Goldyga/goldyga.github.io#readme",
+  "devDependencies": {
+    "grunt": "^1.0.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
