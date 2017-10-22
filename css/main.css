@@ -1,4 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono");
+/*MIXINS*/
+/*GENERAL PROPERTIES*/
 body {
-  background-color: red; }
+  background-color: #000000; }
+
+/*NAVIGATION PROPERTIES*/
+.navigation {
+  margin: 0;
+  background-color: #1C1D1F;
+  border-bottom: 1px solid #313235;
+  border-radius: none; }
+  .navigation .navigation__list {
+    float: none;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between; }
+    .navigation .navigation__list li .home__link {
+      color: #34821A;
+      font-size: 23px; }
+    .navigation .navigation__list li a {
+      font-size: 18px;
+      -ms-transition: transform 0.7s;
+      -webkit-transition: transform 0.7s;
+      transition: transform 0.7s; }
+    .navigation .navigation__list li a:hover {
+      color: #4278E5;
+      -ms-transform: translateY(-5px);
+      -webkit-transform: translateY(-5px);
+      transform: translateY(-5px); }
+    .navigation .navigation__list li a:focus {
+      color: #4278E5;
+      -ms-transform: scale(1.5);
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5); }
 
 /*# sourceMappingURL=main.css.map */

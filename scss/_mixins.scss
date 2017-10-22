@@ -1,0 +1,30 @@
+$primary-color: #000000;
+$element-color: #A0A0A0;
+$btn-state-color: #4278E5;
+$homeheader-color: #34821A;
+$break-small: 767px;
+$break-medium: 992px;
+$break-large: 1200px;
+/*MIXINS*/
+@mixin display-flex() {
+	display: -webkit-flex;
+    display: flex;
+}
+@mixin justify-content($just) {
+	-webkit-justify-content: $just;
+    justify-content: $just;
+}
+@mixin align-content($alig) {
+	-webkit-align-content: $alig;
+    align-content: $alig;
+}
+@mixin transition($sec) {
+	-ms-transition: transform $sec;
+	-webkit-transition: transform $sec;
+	transition: transform $sec;
+}
+@mixin transform($type, $value) {
+	-ms-transform: #{$type}("(#{$value})");
+	-webkit-transform: #{$type}("(#{$value})");
+	transform: #{$type}("(#{$value})");
+}
