@@ -2,11 +2,39 @@
 
 }
 @media (min-width: 767px) and (max-width: 992px) {
-	
+	.navigation .navigation__list {
+		display: block;
+		text-align: center;
+		padding: 50px 0;
+	}
+	.navbar-toggler {
+		margin-top: 10px;
+	}
+	.jumb__message--head {
+		font-size: 55px;
+	}
+	.jumb__message--paragh {
+		font-size: 30px;
+	}
 }
 @media (max-width: 767px) {
-	body {
-
+	.navigation .navigation__list {
+		display: block;
+		text-align: center;
+		padding: 50px 0;
+	}
+	.navbar-toggler {
+		margin-top: 10px;
+	}
+	.jumb__message--head {
+		font-size: 45px;
+	}
+	.jumb__message--paragh {
+		font-size: 20px;
+	}
+	.site__header--small {
+		font-size: 35px;
+		
 	}
 }
 

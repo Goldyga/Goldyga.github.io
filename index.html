@@ -4,40 +4,208 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/mediaqueries.css">
     </head>
     <body id="pageHome">
+
 <!-- navigation start -->
-		<nav class="navigation navbar navbar-inverse">
-		  	<div class="container-fluid container">
-		    	<div class="navbar-header">
-		      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-		      		</button>
-    			</div>
-    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      	<ul class="navigation__list nav navbar-nav">
-			        	<li><a class="home__link" href="#">Home <span class="sr-only">(current)</span></a></li>
-			        	<li><a href="#">About me</a></li>
-			        	<li><a href="#">Projects</a></li>
-			        	<li><a href="#">Contact</a></li>
-			        </ul>
-			    </div>
-			</div>
-    	</nav>
+        <nav class="navigation navbar fixed-top navbar-toggleable-md navbar navbar-inverse bg-inverse bg-faded">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav navigation__list container">
+                    <li class="nav-item">
+                        <a class="home-link nav-link" href="#pageHome" data-toggle="collapse" data-target="#navbarNav">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="navigation__list--link nav-item">
+                        <a class="nav-link" href="#info" data-toggle="collapse" data-target="#navbarNav">About me</a>
+                    </li>
+                    <li class="navigation__list--link nav-item">
+                        <a class="nav-link" href="#skils" data-toggle="collapse" data-target="#navbarNav">Skils</a>
+                    </li>
+                    <li class="navigation__list--link nav-item">
+                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#navbarNav">Projects</a>
+                    </li>
+                    <li class="navigation__list--link nav-item">
+                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#navbarNav">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 <!-- navigation end -->
+        
+<!-- jumbotron start -->
+		<header>
+            <div class="jumb">
+                <div class="jumb__message container">
+                    <h2 class="jumb__message--head">Marcin Gołdyga</h2>
+                    <p class="jumb__message--paragh">aspiring to become Front-End Developer</p>
+                <div>
+            </div>
+            <div class="jumb__btn">
+	            <button href="#info" class="jumb__btn--view">View more
+                    <a href="#info"></a>
+                </button>
+	            <div class=jumb__btn--icon>
+	            	<i class="fa fa-angle-double-down" aria-hidden="true"></i>
+	            </div>
+            </div>
+        </header>
+<!-- jumbotron end -->
+
+<!-- section separator start -->
+		<div class="sep__first container">
+            <div class="sep__wrapper">
+                <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+            </div>
+        </div>
+<!-- section seprator end -->
+
+<!-- info start -->
+        <section class="info container" id="info">
+                <div class="shadows__wrapper">
+                    <div class="info__header">
+                        <h2 class="site__header">Few words</h2>
+                        <p class="site__header--paragh">About me</p>
+                    </div>
+                    <div class="info__content1">
+                        <div class="edu">
+                            <button type="button" class="info__btn info__btn--edu" data-toggle="modal" data-target=".edu__modal">
+                                <div class="info__icon">
+                                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                </div>
+                                <h2 class="info__btn--txt">Education</h2>
+                            </button>
+                            <div class="edu__modal modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <h4 class="modal-title">Modal title</h4>
+                                    <div class="modal-content">
+                                    <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków . Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about">
+                            <button type="button" class="info__btn info__btn--about" data-toggle="modal" data-target=".about__modal">
+                                <div class=info__icon>
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </div>
+                                    <h2 class="info__btn--txt">About me</h2>
+                            </button>
+                            <div class="about__modal modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                                <div class="aboutModalcontent__set modal-dialog modal-lg" role="document">
+                                    <h4 class="modal-title">Modal title</h4>
+                                    <div class="modal-content">
+                                    <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info__content2">
+                        <div class="target">
+                            <button type="button" class="info__btn info__btn--target" data-toggle="modal" data-target=".target__modal">
+                                <div class=info__icon>
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                </div>
+                                <h2 class="info__btn--txt">My Target</h2>
+                            </button>
+                            <div class="target__modal modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <h4 class="modal-title">Modal title</h4>
+                                    <div class="modal-content">
+                                    <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="info__interests">
+                        <div class="interests">
+                            <button type="button" class="info__btn info__btn--interests" data-toggle="modal" data-target=".interests__modal">
+                                <div class=info__icon>
+                                    <i class="icon-looking"></i>
+                                </div>
+                                <h2 class="info__btn--txt">My Interests</h2>
+                            </button>
+                            <div class="interests__modal modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <h4 class="modal-title">Modal title</h4>
+                                    <div class="modal-content">
+                                    <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<!-- info end -->
+
+<!-- section separator start -->
+            <div class="sep container">
+                <div class="sep__wrapper">
+                    <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                </div>
+            </div>
+<!-- section seprator end -->
+            <section class="skills container" id="skils">
+                <div class="shadows__wrapper">
+                    <div class="info__header">
+                        <h2 class="site__header">My</h2>
+                        <p class="site__header--paragh">Projects</p>
+                    </div>
+                    <blockquote class="skills__quote">
+                        <p><em>"Science is like an immense sea ... The more you drink it, the more you are thirsty."</em></p>
+                        <footer>Stefan Żeromski in <cite title="Source Title">Sisyphean work.</cite></footer>
+                    </blockquote>
+                    <h2 class="skills__header">Perfect <small class="skills__header--small">knowledge</small></h2>
+                    <div class="skllis__content">
+                        <button class="skills__icon google__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="Search for information">
+                            <i class="fa fa-google" aria-hidden="true"></i>
+                        </button>
+                        <button class="skills__icon bulb__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="Logical thinking">
+                            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                        </button>
+                        <button class="skills__icon graduation__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="Learning new things">
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        </button>
+                        <button class="skills__icon communication__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="Working in the group">
+                            <i class="fa fa fa-users" aria-hidden="true"></i>
+                        </button>
+                        <h2 class="skills__header">Good <small class="skills__header--small">knowledge</small></h2>
+                        <button class="skills__icon html5__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="html5">
+                            <i class="icon-html5-alt" aria-hidden="true"></i>
+                        <button class="skills__icon css3__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="css3">
+                            <i class="icon-css3-alt" aria-hidden="true"></i>
+                        </button>
+                        <button class="skills__icon sass__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="sass">
+                            <i class="icon-sass" aria-hidden="true"></i>
+                        </button>
+                        <button class="skills__icon bootstrap__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="Bootstrap">
+                            <i class="icon-bootstrap" aria-hidden="true"></i>
+                        </button>
+                        <h2 class="skills__header">Basic <small class="skills__header--small">knowledge</small></h2>
+                        <button class="skills__icon js__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="Javascript">
+                            <i class="icon-javascript" aria-hidden="true"></i>
+                        </button>
+                        <button class="skills__icon java__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="Java">
+                            <i class="icon-java" aria-hidden="true"></i>
+                        </button>                 
+                    </div>
+            </section>
+
 <!-- JS start -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script type="text/javascript" src="portfolio.js"></script>
-        <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="http://cdnjs.com/libraries/popper.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <!-- JS end -->	
     </body>
 </html>
