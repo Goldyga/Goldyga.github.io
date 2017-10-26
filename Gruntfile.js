@@ -1,13 +1,16 @@
 module.exports = function(grunt) {
 
   // Project configuration.
-grunt.initConfig({  
-    
-    concurrent: {
-      target1: ['sass', 'imagemin'],
-      target2: ['watch', 'browserSync']
-    },
+grunt.initConfig({ 
 
+    concurrent: {
+      options: {
+        logConcurrentOutput: true
+      },
+      target1: ['imagemin'],
+      target2: [['watch'], 'browserSync']
+    }, 
+    
     sass: {
         options: {
             sourceMap: true
@@ -33,9 +36,10 @@ grunt.initConfig({
     watch: {
       scripts: {
           files: ['scss/*.scss'],
-          tasks: ['sass'],
+          tasks: ['sass','imagemin'],
           options: {
               spawn: false,
+              livereload: true
           },
       }
     }, 

@@ -21,11 +21,29 @@ $homeheader-color: #34821A;
 	-ms-align-content: $alig;
     align-content: $alig;
 }
+@mixin align-self($self) {
+	-webkit-align-self: $self;
+	-moz-align-self: $self;
+	-ms-align-self: $self;
+    align-self: $self;
+}
+@mixin align-items ($aligI) {
+	-webkit-align-items: $aligI;
+	-moz-align-items: $aligI;
+	-ms-align-items: $aligI;
+    align-items: $aligI;
+}
 @mixin flex-derection($direct) {
 	-webkit-flex-direction: $direct;
 	-moz-flex-direction: $direct;
 	-ms-flex-direction: $direct;
     flex-direction: $direct; 
+}
+@mixin flex-wrap($wrapOrNor) {
+	-webkit-flex-wrap: $wrapOrNor;
+    -moz-flex-wrap: $wrapOrNor; 
+    -ms-flex-wrap: $wrapOrNor; 
+    flex-wrap: $wrapOrNor;
 }
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
 	position: $position;

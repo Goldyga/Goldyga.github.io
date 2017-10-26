@@ -16,6 +16,9 @@
 	.jumb__message--paragh {
 		font-size: 30px;
 	}
+	.info__btn:hover {
+		transform: none;
+	}
 }
 @media (max-width: 767px) {
 	.navigation .navigation__list {
@@ -32,9 +35,20 @@
 	.jumb__message--paragh {
 		font-size: 20px;
 	}
+	.skills__icon {
+		width: 50px;
+		height: 50px;
+		font-size: 25px;
+	}
 	.site__header--small {
-		font-size: 35px;
-		
+		font-size: 35px;	
+	}
+	.info__btn:hover {
+		transform: none;
+	}
+	.projects__content--img {
+		width: 130px;
+		height: 130px;
 	}
 }
 

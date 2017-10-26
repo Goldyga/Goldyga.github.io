@@ -5,10 +5,7 @@ html {
 }
 body {
     background-color: $primary-color;
-    margin-top: 51px;
-}
-#pageHome {
-	margin: -1px;
+    margin-top: 0px;	
 }
 :focus { 
 	outline: none; 
@@ -25,15 +22,61 @@ body {
 		color: $homeheader-color;
 	}
 }
+.icon-java {
+	color: #FFFFFF;
+	background-color: #FFAC37;
+}
 .shadows__wrapper {
 		box-shadow: 0px 0px 100px 0px $btn-state-color;
 		padding-bottom: 120px;
+}
+.fa-google {
+	color: #FFFFFF;
+	background-color: #2C70C2;
+}
+.bulb__icon {
+	color: #000000;
+	background-color: #F6F647;
+}
+.fa-graduation-cap {
+	background-color: #FFFFFF;
+}
+.fa-users {
+	color: #000000;
+	background-color: #124113;
+}
+.icon-html5-alt {
+	color: #FFFFFF;
+	background-color: #FF6C39;
+}
+.icon-css3-alt {
+	color: #FFFFFF;
+	background-color: #264DE4;
+}
+.icon-sass {
+	color: #CF649A;
+	background-color: #FFFFFF;
+}
+.icon-bootstrap {
+	color: #FFFFFF;
+	background-color: #624090;
+}
+.skills__icon {
+	color: #000000;
+	background-color: #F0DB4F;
+}
+.java__icon {
+	color: #FFFFFF;
+	background-color: #FFAC37;
 }
 /*NAVIGATION PROPERTIES*/
 .navigation {
 	border-bottom: 1px solid #444444;
 	padding: 0px;
 
+	.navbar-toggler {
+		background-color: #4278E5;
+	}
 	.navigation__list {
 		display: flex;
 		justify-content: space-around;
@@ -188,24 +231,38 @@ body {
 			background-color: #0B590C;
 			outline: none; 
 		}
-		&--edu {
-			
-		}
-		&--about {
-			
-		}
-		&--target {
-			
-		}
-		&--interests {
-			
-		}
 		&--txt {
 			font-size: 20px;
 		}
 	}
+	&__modal {
+
+		&--title {
+			text-align: center;
+			font-size: 30px;
+			color: #000000;
+			background-color: #FFFFFF;
+		}
+		&--content {
+			padding: 30px;
+			background-color: #10456B;
+			color: #FFFFFF;
+		}
+
+		&--btn {
+			@include display-flex();
+			@include justify-content(center);
+			@include align-self(center);
+			margin-top: 100px;
+			width: 150px;
+		}
+	}
 	&__icon {
 		font-size: 40px;
+
+		.fa-graduation-cap {
+			background-color: transparent;
+		}
 	}
 }
 .skills {
@@ -238,12 +295,12 @@ body {
 		}
 	}
 	&__icon {
-		width: 100px;
-		height: 100px;
-		border-radius: 20px;
-		margin: 2px;
-		font-size: 50px;
-		text-align: center;
+		position: relative;
+		width: 80px;
+		height: 80px;
+		@include border-radius(20px);
+		margin: 5px;
+		font-size: 40px;
 
 		&:hover {
 			color: grey;
@@ -253,43 +310,101 @@ body {
 		&:focus {
 			outline: none;
 		}
+		.icon {
+			@include position(absolute, $top: 0, $left: 0)
+			height: 100%;
+			width: 100%;
+			@include border-radius(20px);
+
+			&:before {
+				height: 100%;
+				width: 100%;
+				@include display-flex();
+				@include justify-content(center);
+				@include align-items (center);
+			}
+		}
 	}
-	.google__icon {
-	color: #FFFFFF;
-	background-color: #2C70C2;
+}
+.projects {
+	padding-top: 5px;
+	text-align: center;
+
+	&__container {
+		@include display-flex();
+		@include flex-wrap(wrap);
+		@include align-content(center);
+		@include justify-content(center);
+
+		&--content {
+			position: relative;
+			margin: 10px;
+		}
+		img {
+			width: 300px;
+			height: 300px;
+		}
+		&--card {
+			width: 300px;
+			margin-top: 2px;
+			padding-bottom: 5px;
+			background-color: #12507A;
+			color: #FFFFFF;
+
+			.btn__card {
+				display: block;
+				margin: 10px;
+			}
+		}
+		&--layer {
+			width: 300px;
+			height: 300px;
+			@include position(absolute, $top: 0);
+			font-size: 20px;
+			background-color: transparent;
+			@include transition(1s);
+
+			&:hover {
+				background-color: rgba(0,0,0, 0.5);
+				cursor: pointer;
+			}
+		}
 	}
-	.bulb__icon {
-		color: #000000;
-		background-color: #F6F647;
-	}
-	.graduation__icon {
-		background-color: #FFFFFF;
-	}
-	.communication__icon {
-		color: #000000;
-		background-color: #124113;
-	}
-	.html5__icon {
-		color: #FFFFFF;
-		background-color: #FF6C39;
-	}
-	.css3__icon {
-		color: #FFFFFF;
-		background-color: #264DE4;
-	}
-	.sass__icon {
-		color: #CF649A;
-	}
-	.bootstrap__icon {
-		color: #FFFFFF;
-		background-color: #624090;
-	}
-	.js__icon {
-		color: #000000;
-		background-color: #F0DB4F;
-	}
-	.java__icon {
-		color: #FFFFFF;
-		background-color: #FFAC37;
+	.layer__icon {
+		@include position(absolute, $top: 0);
+		@include display-flex();
+		@include align-items(center);
+		@include justify-content(center);
+		@include flex-wrap(wrap);
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		@include transition(1s);
+	
+		&:hover {
+			@include position(absolute, $top: 0);
+			@include display-flex();
+			@include align-items(center);
+			@include justify-content(center);
+			@include flex-wrap(wrap);
+			width: 100%;
+			height: 100%;
+			opacity: 0.9;
+		}
+
+		.icon {
+			font-size: 20px;
+			padding: 5px;
+			margin: 2px;
+			text-align: center;
+
+			&:before {
+				height: 100%;
+				width: 100%;
+				@include display-flex();
+				@include justify-content(center);
+				@include align-items (center);
+			}
+		}
 	}
 }
