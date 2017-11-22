@@ -2,6 +2,7 @@ $primary-color: #000000;
 $element-color: #A0A0A0;
 $btn-state-color: #4278E5;
 $homeheader-color: #34821A;
+$primary-font:'Open Sans', sans-serif;;
 /*MIXINS*/
 @mixin display-flex() {
 	display: -webkit-flex;

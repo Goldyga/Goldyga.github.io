@@ -39,10 +39,6 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 })
 
-$('.close').click(function(e) {
-    $('.show').removeClass('show');
-});
-
 $(document).on('click', function (e) {
     $('[data-toggle="popover"],[data-original-title]').each(function () {
         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {                
@@ -50,3 +46,4 @@ $(document).on('click', function (e) {
         }
     });
 });
+

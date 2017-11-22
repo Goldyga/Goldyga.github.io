@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import 'mixins';
 /*GENERAL PROPERTIES*/
 html {
 }
+* {
+	font-family: $primary-font;
+}
 body {
     background-color: $primary-color;
-    margin-top: 0px;	
+    margin-top: 0px;
+    overflow: visible;
 }
 :focus { 
 	outline: none; 
@@ -22,13 +26,28 @@ body {
 		color: $homeheader-color;
 	}
 }
-.icon-java {
-	color: #FFFFFF;
-	background-color: #FFAC37;
-}
 .shadows__wrapper {
 		box-shadow: 0px 0px 100px 0px $btn-state-color;
 		padding-bottom: 120px;
+}
+.fa-google {
+	color: #FFFFFF;
+	background-color: #2C70C2;
+}
+.fa-lightbulb-o {
+	color: #000000;
+	background-color: #F6F647;
+}
+.fa-graduation-cap {
+	background-color: #FFFFFF;
+}
+.fa-users {
+	color: #000000;
+	background-color: #124113;
+}
+.icon-java {
+	color: #FFFFFF;
+	background-color: #FFAC37;
 }
 .fa-google {
 	color: #FFFFFF;
@@ -61,14 +80,30 @@ body {
 	color: #FFFFFF;
 	background-color: #624090;
 }
-.skills__icon {
-	color: #000000;
-	background-color: #F0DB4F;
+.icon-javascript {
+	background-color: #F7E018;
+	color: #000000;	
 }
 .java__icon {
 	color: #FFFFFF;
 	background-color: #FFAC37;
 }
+.icon-jquery {
+	color: #3987BD;
+	background-color: #FFFFFF;
+}
+.icon-text {
+	background-color: #FFFFFF;
+	color: #000000;
+	text-transform: uppercase;
+	font-weight: bold;
+	@include border-radius(10px);
+	padding: 3px;
+	margin: 2px;
+	font-size: 15px;
+}
+
+
 /*NAVIGATION PROPERTIES*/
 .navigation {
 	border-bottom: 1px solid #444444;
@@ -226,6 +261,13 @@ body {
 			@include transform(scale, 1.2);
 			cursor: pointer;
 		}
+		&--icon {
+			font-size: 40px;
+
+			.fa-graduation-cap {
+				background-color: inherit;
+			}
+		}
 		&:focus {
 			color: #000000;
 			background-color: #0B590C;
@@ -239,32 +281,80 @@ body {
 
 		&--title {
 			text-align: center;
+			text-transform: uppercase;
 			font-size: 30px;
-			color: #000000;
-			background-color: #FFFFFF;
+			color: #FFFFFF;
+			background-color: #135E93;
+		}
+		.aboutModal {
+			background-image: url(../imageMin/aboutBckg.png);
+			background-size: cover;
+			background-position: center;
+		}
+		.eduModal {
+			background-image: url(../imageMin/eduBckg.png);
+			background-size: cover;
+			background-position: center;
+		}
+		.interestsModal {
+			background-image: url(../imageMin/interestsBckg.png);
+			background-size: cover;
+			background-position: center;
+		}
+		.targetModal {
+			background-image: url(../imageMin/targetBckg.png);
+			background-size: cover;
+			background-position: center;
 		}
 		&--content {
 			padding: 30px;
 			background-color: #10456B;
 			color: #FFFFFF;
-		}
 
+			.aboutText {
+				padding: 15px;
+				background-color: rgba(0,0,0, 0.9);
+				@include border-radius(10px);
+			}
+			p {
+				font-size: 20px;
+				line-height: 40px;
+			}
+			ul {
+				list-style-type: none;
+				margin-top: 50px;
+
+				li {
+					background-color: rgba(0,0,0, 0.9);
+					@include border-radius(10px);
+
+					p {
+						font-size: 20px;
+						padding-left: 20px;
+						padding-bottom: 20px;
+					}
+					.fa {
+						@include border-radius(5px);
+						font-size: 40px;
+						color: #FFFFFF;
+						background-color: initial;
+						padding: 5px;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
 		&--btn {
 			@include display-flex();
 			@include justify-content(center);
 			@include align-self(center);
-			margin-top: 100px;
+			margin-top: 50px;
 			width: 150px;
-		}
-	}
-	&__icon {
-		font-size: 40px;
-
-		.fa-graduation-cap {
-			background-color: transparent;
+			cursor: pointer;
 		}
 	}
 }
+
 .skills {
 	padding-top: 5px;
 	text-align: center;
@@ -292,6 +382,7 @@ body {
 		}
 		footer {
 			text-align: right;
+			background-color: inherit;
 		}
 	}
 	&__icon {
@@ -299,9 +390,17 @@ body {
 		width: 80px;
 		height: 80px;
 		@include border-radius(20px);
-		margin: 5px;
+		background-color: inherit;
+		border: none;
+		margin: 1px;
 		font-size: 40px;
 
+		img {
+			@include border-radius(20px);
+			@include position(absolute, $top: 0, $left: 0)
+			height: 100%;
+			width: 100%;
+		}
 		&:hover {
 			color: grey;
 			opacity: 0.7;
@@ -326,6 +425,8 @@ body {
 		}
 	}
 }
+
+
 .projects {
 	padding-top: 5px;
 	text-align: center;
@@ -339,18 +440,45 @@ body {
 		&--content {
 			position: relative;
 			margin: 10px;
+			/*border: 2px solid #3D3A3A;*/
+			height: 100%;
 		}
-		img {
-			width: 300px;
-			height: 300px;
+		figcaption {
+			border: 1px solid lightblue;
+
+			img {
+				width: 300px;
+				height: 300px;
+				object-fit: cover;
+				object-position: 0% 0%;
+			}
+		}
+		.paperRockImg {
+			object-position: center;
+		}
+		.kanbanImg {
+			object-position: center;
 		}
 		&--card {
 			width: 300px;
 			margin-top: 2px;
-			padding-bottom: 5px;
-			background-color: #12507A;
+			padding: 30px 0;
+			background-color: #141414;
 			color: #FFFFFF;
 
+			.mobile-icon {
+				display: none;
+				height: auto;
+				width: 35px;
+				margin: 5px;
+				text-align: center;
+				font-size: 25px;
+
+				.icon {
+					height: 100%;
+					display: block;
+				}
+			}
 			.btn__card {
 				display: block;
 				margin: 10px;
@@ -404,6 +532,57 @@ body {
 				@include display-flex();
 				@include justify-content(center);
 				@include align-items (center);
+			}
+		}
+	}
+}
+
+footer {
+	background-color: #1a1a1c;
+
+	.foot {
+
+		&__contact {
+			padding: 20px 20px;
+
+			label {
+				margin: 10px 0;
+				font-size: 20px;
+				color: $homeheader-color;
+			}
+			button {
+				margin-top: 20px;
+				cursor: pointer;
+			}
+		}
+		&__social {
+			padding: 45px 0;
+			text-align: center;
+
+			h2 {
+				margin: 10px;
+				font-size: 20px;
+				color: $homeheader-color;
+			}
+			button {
+				margin: 10px;
+				height: 80px;
+				width: 150px;
+				outline: none;
+				cursor: pointer;
+				@include border-radius(15px);
+				position: relative; 
+
+				&:hover {
+					opacity: 0.5;
+				}
+				img {
+					width: 100%;
+					height: 100%;
+				}
+				a {
+					@include position(absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
+				}	
 			}
 		}
 	}

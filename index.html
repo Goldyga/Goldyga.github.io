@@ -11,10 +11,11 @@
         <link rel="stylesheet" type="text/css" href="css/mediaqueries.css">
     </head>
     <body id="pageHome">
+
 <!-- navigation start -->
         <nav class="navigation navbar fixed-top navbar-toggleable-md navbar navbar-inverse bg-inverse bg-faded">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav navigation__list container">
@@ -75,7 +76,7 @@
                     <div class="info__content1">
                         <div class="about">
                             <button type="button" class="info__btn info__btn--about" data-toggle="modal" data-target=".about__modal">
-                                <div class=info__icon>
+                                <div class="info__btn--icon">
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                 </div>
                                     <h2 class="info__btn--txt">About me</h2>
@@ -83,8 +84,12 @@
                             <div class="about__modal info__modal modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <h4 class="info__modal--title modal-title">About me</h4>
-                                    <div class="info__modal--content modal-content">
-                                    <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+                                    <div class="info__modal--content modal-content aboutModal">
+                                    <div class="aboutText">
+                                        <p> &ensp; &ensp; Hi, my name is Marcin Gołdyga and I live in Lodz. 
+                                        I am interested in computers and various technologies since childhood. When I got my first computer - Amiga 500 i was fascinated how can creators (developers) could explain this pile of scrap what and how she will do :) .</p>
+                                        <p> &ensp; &ensp; Front-end programming I has been dealing with since the beginning of this year. I consistently make better and worse projects in order to broaden my knowledge. I created this portfolio because I would like to present my work and get my first job to further develop my skills.</p>
+                                    </div>
                                     <button class="info__modal--btn btn btn-primary" type="button" data-dismiss="modal">
                                         <span>Close</span>
                                     </button>
@@ -94,7 +99,7 @@
                         </div>
                         <div class="edu">
                             <button type="button" class="info__btn info__btn--edu" data-toggle="modal" data-target=".edu__modal">
-                                <div class="info__icon">
+                                <div class="info__btn--icon">
                                     <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                                 </div>
                                 <h2 class="info__btn--txt">Education</h2>
@@ -102,9 +107,12 @@
                             <div class="edu__modal info__modal modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <h4 class="info__modal--title modal-title">Education</h4>
-                                    <div class="info__modal--content modal-content">
-                                    <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków . Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
-                                    <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków . Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+                                    <div class="info__modal--content modal-content eduModal">
+                                        <ul>
+                                            <li><i class="icon fa fa-graduation-cap" aria-hidden="true"></i><p>Kodilla course.<br> - Front-End Developer</p></li>
+                                            <li><i class="icon fa fa-graduation-cap" aria-hidden="true"></i><p>Toeic Bridge.<br> - Ceryficate</p></li>
+                                            <li><i class="icon fa fa-graduation-cap" aria-hidden="true"></i><p>Social Academy of Sciences in Lodz.<br> - Master's degree in organizational management.</p></li>
+                                        </ul>
                                     <button class="info__modal--btn btn btn-primary" type="button" data-dismiss="modal">
                                         <span>Close</span>
                                     </button>
@@ -116,7 +124,7 @@
                     <div class="info__content2">
                         <div class="target">
                             <button type="button" class="info__btn info__btn--target" data-toggle="modal" data-target=".target__modal">
-                                <div class=info__icon>
+                                <div class="info__btn--icon">
                                     <i class="fa fa-check-square-o" aria-hidden="true"></i>
                                 </div>
                                 <h2 class="info__btn--txt">My Target</h2>
@@ -124,8 +132,11 @@
                             <div class="target__modal info__modal modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <h4 class="info__modal--title modal-title">My Target</h4>
-                                    <div class="info__modal--content modal-content">
-                                    <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+                                    <div class="info__modal--content modal-content targetModal">
+                                    <ul>
+                                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><p>Get a job on the bench Junior Front-End Developer.</p></li>
+                                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><p>Developing knowledge from front-end and other programming languages.</p></li>
+                                    </ul>
                                     <button class="info__modal--btn btn btn-primary" type="button" data-dismiss="modal">
                                         <span>Close</span>
                                     </button>
@@ -136,16 +147,21 @@
                     <div class="info__interests">
                         <div class="interests">
                             <button type="button" class="info__btn info__btn--interests" data-toggle="modal" data-target=".interests__modal">
-                                <div class=info__icon>
-                                    <i class="icon-looking"></i>
+                                <div class="info__btn--icon" >
+                                    <i class="icon-looking" aria-hidden="true"></i>
                                 </div>
                                 <h2 class="info__btn--txt">My Interests</h2>
                             </button>
                             <div class="interests__modal info__modal modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <h4 class="info__modal--title modal-title">My interests</h4>
-                                    <div class="info__modal--content modal-content">
-                                    <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+                                    <div class="info__modal--content modal-content interestsModal">
+                                    <ul>
+                                        <li><i class="fa icon-looking" aria-hidden="true"></i><p>Programming and computers.</p></li>
+                                        <li><i class="fa icon-looking" aria-hidden="true"></i><p>Documentary and science fiction films.</p></li>
+                                        <li><i class="fa icon-looking" aria-hidden="true"></i><p>Different type of music.</p></li>
+                                        <li><i class="fa icon-looking" aria-hidden="true"></i><p>Motorization.</p></li>
+                                    </ul>
                                     <button class="info__modal--btn btn btn-primary" type="button" data-dismiss="modal">
                                         <span>Close</span>
                                     </button>
@@ -192,23 +208,32 @@
                             <i class="icon fa fa-users" aria-hidden="true"></i>
                         </button>
                         <h2 class="skills__header">Good <small class="skills__header--small">knowledge</small></h2>
-                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="html5">
-                            <i class="icon icon-html5-alt" aria-hidden="true"></i>
-                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="css3">
-                            <i class="icon icon-css3-alt" aria-hidden="true"></i>
+                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="right"  data-content="I am currently trying to write a semantic code and am constantly learning new things related to syntax.">
+                            <img src="imageMin/htmlLogo.png">
+                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="right"  data-content="At this point i can do enough good to use CSS3. In my work on the diffrent projects I try to write clean code and I know how to use FLEXBOX and GRID to create layout.">
+                            <img src="imageMin/css3Logo.png">
                         </button>
-                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="sass">
-                            <i class="icon icon-sass" aria-hidden="true"></i>
+                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="I update my all projects on GITHUB, and I realize how much this tool is useful in teamwork.">
+                            <img src="imageMin/gitLogo.png">
                         </button>
-                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="Bootstrap">
-                            <i class="icon icon-bootstrap" aria-hidden="true"></i>
+                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="I use SCSS in my work, I create much useful mixins, I'm using class extensions and I constantly learn syntax so that speed up write my code.">
+                            <img src="imageMin/sassLogo.png">
+                        </button>
+                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="I know Bootstrap and several other frameworks.">
+                            <img src="imageMin/bootstrapLogo.png">
+                        </button>
+                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="I am currently using several tasks and I am trying to maximum automate my work">
+                            <img src="imageMin/gruntLogo.png">
                         </button>
                         <h2 class="skills__header">Basic <small class="skills__header--small">knowledge</small></h2>
-                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="Javascript">
-                            <i class="icon icon-javascript" aria-hidden="true"></i>
+                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="My knowledge about JavaScript is basic, but i still learning and I write write write ... :)">
+                            <img src="imageMin/jsLogo.png">
                         </button>
-                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="Java">
-                            <i class="icon icon-java" aria-hidden="true"></i>
+                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="In this moment i try to perfect understend JavaScript, but also I learn work with Jquery.">
+                            <img src="imageMin/jqueryLogo.png">
+                        </button> 
+                        <button class="skills__icon" data-container="body" data-toggle="popover" data-placement="bottom"  data-content="In Java I met the basic rules.">
+                            <img src="imageMin/javaLogo.png">
                         </button>                 
                     </div>
             </section>
@@ -232,101 +257,127 @@
                     <div class="projects__container">
                         <div class="projects__container--content">
                             <figcaption>
-                                <img class="card-img-top" src="http://www.noviart.pl/wp-content/uploads/2012/04/strona-e1335535414925.jpg">
+                                <img class="card-img-top" src="imageMin/portfolio.png">
                             </figcaption>
                             <div class="projects__container--card">
-                                <h4>Card title</h4>
-                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn__card btn btn-success">Live</a>
-                                <a href="#" class="btn__card btn btn-primary">Github-code</a>
+                                <h4>My Portfolio<br><br><br></h4>
+                                <div class="mobile-icon">
+                                    <i class="icon-text" aria-hidden="true">flex</i>
+                                </div>
+                                <div class="mobile-icon">
+                                    <i class="icon icon-sass" aria-hidden="true"></i>
+                                </div>
+                                <div class="mobile-icon">
+                                    <i class="icon icon-bootstrap" aria-hidden="true"></i>
+                                </div>
+                                <div class="mobile-icon">
+                                    <i class="icon icon-javascript" aria-hidden="true"></i>
+                                </div>
+                                <a href="https://goldyga.github.io/" target="_blank" class="btn__card btn btn-success">Live</a>
+                                <a href="https://github.com/Goldyga/goldyga.github.io.git" target="_blank" class="btn__card btn btn-primary">Github-code</a>
                             </div>
                             <div class="projects__container--layer">
                                 <div class="layer__icon">
-                                    <i class="icon icon-java" aria-hidden="true"></i>
-                                    <i class="icon fa fa-graduation-cap" aria-hidden="true"></i>
+                                    <i class="icon-text" aria-hidden="true">flex</i>
+                                    <i class="icon icon-sass" aria-hidden="true"></i>
+                                    <i class="icon icon-bootstrap" aria-hidden="true"></i>
+                                    <i class="icon icon-javascript"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="projects__container--content">
                             <figcaption>
-                                <img class="card-img-top" src="http://www.noviart.pl/wp-content/uploads/2012/04/strona-e1335535414925.jpg">
+                                <img class="card-img-top" src="imageMin/company.png">
                             </figcaption>
                             <div class="projects__container--card">
-                                <h4>Card title</h4>
-                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn__card btn btn-success">Live</a>
-                                <a href="#" class="btn__card btn btn-primary">Github-code</a>
+                                <h4>Example of company website<br><br></h4>
+                                <div class="mobile-icon">
+                                    <i class="icon-text" aria-hidden="true">grid</i>
+                                </div>
+                                <div class="mobile-icon">
+                                    <i class="icon icon-javascript"></i>
+                                </div>
+                                <a href="https://goldyga.github.io/grid-project.github.io/" target="_blank" class="btn__card btn btn-success">Live</a>
+                                <a href="https://github.com/Goldyga/grid-project.github.io.git" target="_blank" class="btn__card btn btn-primary">Github-code</a>
                             </div>
                             <div class="projects__container--layer">
                                 <div class="layer__icon">
-                                    <i class="icon icon-java" aria-hidden="true"></i>
-                                    <i class="icon fa fa-graduation-cap" aria-hidden="true"></i>
+                                    <i class="icon-text" aria-hidden="true">grid</i>
+                                    <i class="icon icon-javascript"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="projects__container--content">
                             <figcaption>
-                                <img class="card-img-top" src="http://www.noviart.pl/wp-content/uploads/2012/04/strona-e1335535414925.jpg">
+                                <img class="card-img-top" src="imageMin/picture.png">
                             </figcaption>
                             <div class="projects__container--card">
-                                <h4>Card title</h4>
-                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn__card btn btn-success">Live</a>
-                                <a href="#" class="btn__card btn btn-primary">Github-code</a>
+                                <h4>Cut PSD<br><br><br></h4>
+                                <div class="mobile-icon">
+                                    <i class="icon-text" aria-hidden="true">grid</i>
+                                </div>
+                                <div class="mobile-icon">
+                                    <i class="icon-text" aria-hidden="true">flex</i>
+                                </div>
+                                <div class="mobile-icon">
+                                    <i class="icon icon-sass" aria-hidden="true"></i>
+                                </div>
+                                <a href="https://goldyga.github.io/perfect-picture.github.io/" target="_blank" class="btn__card btn btn-success">Live</a>
+                                <a href="https://github.com/Goldyga/perfect-picture.github.io.git" target="_blank" class="btn__card btn btn-primary">Github-code</a>
                             </div>
                             <div class="projects__container--layer">
                                 <div class="layer__icon">
-                                    <i class="icon icon-java" aria-hidden="true"></i>
-                                    <i class="icon fa fa-graduation-cap" aria-hidden="true"></i>
+                                    <i class="icon-text" aria-hidden="true">Grid</i>
+                                    <i class="icon-text" aria-hidden="true">flex</i>
+                                    <i class="icon icon-sass" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="projects__container--content">
                             <figcaption>
-                                <img class="card-img-top" src="http://www.noviart.pl/wp-content/uploads/2012/04/strona-e1335535414925.jpg">
+                                <img class="paperRockImg" src="imageMin/paperRockScissor.png">
                             </figcaption>
                             <div class="projects__container--card">
-                                <h4>Card title</h4>
-                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn__card btn btn-success">Live</a>
-                                <a href="#" class="btn__card btn btn-primary">Github-code</a>
+                                <h4>Paper & Rock & Scissor game in JS<br><br></h4>
+                                <div class="mobile-icon">
+                                    <i class="icon-text" aria-hidden="true">flex</i>
+                                </div>
+                                <div class="mobile-icon">
+                                    <i class="icon icon-javascript"></i>
+                                </div>
+                                <div class="mobile-icon">
+                                    <i class="icon icon-sass" aria-hidden="true"></i>
+                                </div>
+                                <a href="https://goldyga.github.io/PapperRockScissor.github.io/" target="_blank" class="btn__card btn btn-success">Live</a>
+                                <a href="https://github.com/Goldyga/PapperRockScissor.github.io.git" target="_blank" class="btn__card btn btn-primary">Github-code</a>
                             </div>
                             <div class="projects__container--layer">
                                 <div class="layer__icon">
-                                    <i class="icon icon-java" aria-hidden="true"></i>
-                                    <i class="icon fa fa-graduation-cap" aria-hidden="true"></i>
+                                    <i class="icon-text" aria-hidden="true">flex</i>
+                                    <i class="icon icon-javascript"></i>
+                                    <i class="icon icon-sass" aria-hidden="true"></i>
                                 </div>
                             </div>
-                        </div><div class="projects__container--content">
+                        </div>
+                        <div class="projects__container--content">
                             <figcaption>
-                                <img class="card-img-top" src="http://www.noviart.pl/wp-content/uploads/2012/04/strona-e1335535414925.jpg">
+                                <img class="kanbanImg" src="imageMin/kanbanBoard.png">
                             </figcaption>
                             <div class="projects__container--card">
-                                <h4>Card title</h4>
-                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn__card btn btn-success">Live</a>
-                                <a href="#" class="btn__card btn btn-primary">Github-code</a>
-                            </div>
-                            <div class="projects__container--layer">
-                                <div class="layer__icon">
-                                    <i class="icon icon-java" aria-hidden="true"></i>
-                                    <i class="icon fa fa-graduation-cap" aria-hidden="true"></i>
+                                <h4>Kanban board<br>in JQuery<br><br></h4>
+                                <div class="mobile-icon">
+                                    <i class="icon icon-jquery"></i>
                                 </div>
-                            </div>
-                        </div><div class="projects__container--content">
-                            <figcaption>
-                                <img class="card-img-top" src="http://www.noviart.pl/wp-content/uploads/2012/04/strona-e1335535414925.jpg">
-                            </figcaption>
-                            <div class="projects__container--card">
-                                <h4>Card title</h4>
-                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn__card btn btn-success">Live</a>
-                                <a href="#" class="btn__card btn btn-primary">Github-code</a>
+                                <div class="mobile-icon">
+                                    <i class="icon icon-sass" aria-hidden="true"></i>
+                                </div>
+                                <a href="https://goldyga.github.io/kanban-board.github.io/" target="_blank" class="btn__card btn btn-success">Live</a>
+                                <a href="https://github.com/Goldyga/kanban-board.github.io.git" target="_blank" class="btn__card btn btn-primary">Github-code</a>
                             </div>
                             <div class="projects__container--layer">
                                 <div class="layer__icon">
-                                    <i class="icon icon-java" aria-hidden="true"></i>
-                                    <i class="icon fa fa-graduation-cap" aria-hidden="true"></i>
+                                    <i class="icon icon-jquery"></i>
+                                    <i class="icon icon-sass" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </div>
@@ -343,11 +394,40 @@
             </div>
 <!-- section seprator end -->
 
+<!-- footer start -->
+        <footer class="foot" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 foot__contact">
+                        <form action="https://formspree.io/marcingo@toya.net.pl"
+                              method="POST">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" name="_replyto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
+                            <label for="exampleTextarea">Message</label>
+                            <textarea type="text" name="message" class="form-control foot__contact--message" id="exampleTextarea" rows="7" placeholder="Enter message"></textarea>
+                            <button type="submit" class="btn btn-info"">Send</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-7 foot__social">
+                        <h2>Check my github</h2>
+                        <button>
+                            <img class="card-img-top" src="imageMin/githubIcon.png">
+                            <a href="https://github.com/Goldyga" target="_blank"></a>
+                        </button>
+                        <h2>Download my CV</h2>
+                        <button>
+                            <img class="card-img-top" src="imageMin/cvIcon.png">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="foot__bottom"></div>
+        </footer>
+<!-- footer start -->
+
 <!-- JS start -->
-        <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script type="text/javascript" src="js/portfolio.js"></script>
-        <script src="https://cdnjs.com/libraries/popper.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <!-- JS end -->	

@@ -1,7 +1,7 @@
 @media (min-width: 992px) and (max-width: 1200px) {
 
 }
-@media (min-width: 767px) and (max-width: 992px) {
+@media (max-width: 992px) {
 	.navigation .navigation__list {
 		display: block;
 		text-align: center;
@@ -18,6 +18,12 @@
 	}
 	.info__btn:hover {
 		transform: none;
+	}
+	.projects__container--card .mobile-icon {
+		display: inline-block;
+	}
+	.projects__container--layer {
+		display: none;
 	}
 }
 @media (max-width: 767px) {
