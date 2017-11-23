@@ -1,34 +1,30 @@
- // Select all links with hashes
+window.onload = function (){
+  var tag = document.getElementById("pageHome");
+};
+
 $('a[href*="#"]')
-  // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
-    // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
       && 
       location.hostname == this.hostname
     ) {
-      // Figure out element to scroll to
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
       if (target.length) {
-        // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 700, function() {
-          // Callback after animation
-          // Must change focus!
+        }, 500, function() {
           var $target = $(target);
           $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
+          if ($target.is(":focus")) { 
             return false;
           } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
+            $target.attr('tabindex','-1'); 
+            $target.focus();
           };
         });
       }
@@ -46,4 +42,10 @@ $(document).on('click', function (e) {
         }
     });
 });
+
+window.sr = ScrollReveal({ reset: true });
+sr.reveal('.info', { duration: 2000});
+sr.reveal('.skills', { duration: 2000});
+sr.reveal('.projects', { duration: 2000});
+sr.reveal('.foot', { duration: 2000});
 

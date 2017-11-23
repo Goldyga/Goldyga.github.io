@@ -1,5 +1,7 @@
-@media (min-width: 992px) and (max-width: 1200px) {
-
+@media (max-width: 1200px) {
+	.projects {
+		padding-top: 150px;	
+	}
 }
 @media (max-width: 992px) {
 	.navigation .navigation__list {
@@ -22,9 +24,9 @@
 	.projects__container--card .mobile-icon {
 		display: inline-block;
 	}
-	.projects__container--layer {
-		display: none;
-	}
+	.projects__container--layer:hover {
+		opacity: 0;
+	}	
 }
 @media (max-width: 767px) {
 	.navigation .navigation__list {
@@ -40,11 +42,6 @@
 	}
 	.jumb__message--paragh {
 		font-size: 20px;
-	}
-	.skills__icon {
-		width: 50px;
-		height: 50px;
-		font-size: 25px;
 	}
 	.site__header--small {
 		font-size: 35px;	

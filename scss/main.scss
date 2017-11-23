@@ -9,6 +9,7 @@ html {
 body {
     background-color: $primary-color;
     margin-top: 0px;
+    height: 100%;
     overflow: visible;
 }
 :focus { 
@@ -74,7 +75,6 @@ body {
 }
 .icon-sass {
 	color: #CF649A;
-	background-color: #FFFFFF;
 }
 .icon-bootstrap {
 	color: #FFFFFF;
@@ -111,6 +111,7 @@ body {
 
 	.navbar-toggler {
 		background-color: #4278E5;
+		z-index: 2;
 	}
 	.navigation__list {
 		display: flex;
@@ -139,6 +140,8 @@ body {
 		}
 	}
 }
+
+
 .jumb {
 	height: 100vh;
 	background: url(https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb) center no-repeat;
@@ -200,37 +203,12 @@ body {
 		}
 	}
 }
-.sep {
-	margin-top: 120px;
-	margin-bottom: 40px;	
-	@include display-flex();
-	@include justify-content(center);
-	@include align-content(center);
 
-	&__wrapper {
-		display: inline-block;
-		font-size: 150px;
-		@include animation(rotateSpin, 2s, infinite);
-	}
-	@keyframes rotateSpin {
-	    0% {
-	        transform: rotate(0deg);
-	        color: #315632;
-	    }
-	    50% {
-	        transform: rotate(360deg);
-	    }
-	    100% {
-	        transform: rotate(360deg);
-	    }
-	}
-	&__first {
-		@extend .sep;
-		margin-top: 0;
-	}
-}
+
 .info {	
-	padding-top: 5px;
+	padding-top: 20px;
+	margin-top: 300px;
+	margin-bottom: 300px;
 
 	&__header {
 		text-align: center;
@@ -279,6 +257,7 @@ body {
 	}
 	&__modal {
 
+
 		&--title {
 			text-align: center;
 			text-transform: uppercase;
@@ -313,7 +292,8 @@ body {
 
 			.aboutText {
 				padding: 15px;
-				background-color: rgba(0,0,0, 0.9);
+				text-align: justify;
+				background-color: rgba(0,0,0, 0.7);
 				@include border-radius(10px);
 			}
 			p {
@@ -325,7 +305,7 @@ body {
 				margin-top: 50px;
 
 				li {
-					background-color: rgba(0,0,0, 0.9);
+					background-color: rgba(0,0,0, 0.8);
 					@include border-radius(10px);
 
 					p {
@@ -356,8 +336,9 @@ body {
 }
 
 .skills {
-	padding-top: 5px;
+	padding-top: 20px;
 	text-align: center;
+	margin-bottom: 300px;
 
 	&__header {
 		margin: 80px;
@@ -381,19 +362,20 @@ body {
 			font-size: 20px;
 		}
 		footer {
+			margin: 20px;
 			text-align: right;
 			background-color: inherit;
 		}
 	}
 	&__icon {
 		position: relative;
-		width: 80px;
-		height: 80px;
+		width: 100px;
+		height: 100px;
 		@include border-radius(20px);
 		background-color: inherit;
 		border: none;
 		margin: 1px;
-		font-size: 40px;
+		font-size: 60px;
 
 		img {
 			@include border-radius(20px);
@@ -428,7 +410,7 @@ body {
 
 
 .projects {
-	padding-top: 5px;
+	padding-top: 20px;
 	text-align: center;
 
 	&__container {
@@ -440,11 +422,10 @@ body {
 		&--content {
 			position: relative;
 			margin: 10px;
-			/*border: 2px solid #3D3A3A;*/
 			height: 100%;
 		}
 		figcaption {
-			border: 1px solid lightblue;
+			position: relative;
 
 			img {
 				width: 300px;
@@ -468,7 +449,7 @@ body {
 
 			.mobile-icon {
 				display: none;
-				height: auto;
+				height: 35px;
 				width: 35px;
 				margin: 5px;
 				text-align: center;
@@ -476,6 +457,7 @@ body {
 
 				.icon {
 					height: 100%;
+					width: 100%;
 					display: block;
 				}
 			}
@@ -491,10 +473,14 @@ body {
 			font-size: 20px;
 			background-color: transparent;
 			@include transition(1s);
+			position: absolute;
 
 			&:hover {
 				background-color: rgba(0,0,0, 0.5);
 				cursor: pointer;
+			}
+			a {
+				@include position(absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
 			}
 		}
 	}
@@ -538,7 +524,8 @@ body {
 }
 
 footer {
-	background-color: #1a1a1c;
+	background-color: #1A1A1C;
+	margin-top: 300px;
 
 	.foot {
 
