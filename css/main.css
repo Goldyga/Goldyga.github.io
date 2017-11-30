@@ -61,46 +61,6 @@ body {
   color: #000000;
   background-color: #124113; }
 
-.icon-html5-alt {
-  color: #FFFFFF;
-  background-color: #FF6C39; }
-
-.icon-css3-alt {
-  color: #FFFFFF;
-  background-color: #264DE4; }
-
-.icon-sass {
-  color: #CF649A; }
-
-.icon-bootstrap {
-  color: #FFFFFF;
-  background-color: #624090; }
-
-.icon-javascript {
-  background-color: #F7E018;
-  color: #000000; }
-
-.java__icon {
-  color: #FFFFFF;
-  background-color: #FFAC37; }
-
-.icon-jquery {
-  color: #3987BD;
-  background-color: #FFFFFF; }
-
-.icon-text {
-  background-color: #FFFFFF;
-  color: #000000;
-  text-transform: uppercase;
-  font-weight: bold;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
-  padding: 3px;
-  margin: 2px;
-  font-size: 15px; }
-
 /*NAVIGATION PROPERTIES*/
 .navigation {
   border-bottom: 1px solid #444444;
@@ -290,6 +250,12 @@ body {
       -moz-border-radius: 10px;
       -ms-border-radius: 10px;
       border-radius: 10px; }
+    .info__modal--content figcaption {
+      text-align: center;
+      padding: 50px 0px; }
+      .info__modal--content figcaption .face-img {
+        border-radius: 20%;
+        width: 40%; }
     .info__modal--content p {
       font-size: 20px;
       line-height: 40px; }
@@ -359,8 +325,8 @@ body {
       background-color: inherit; }
   .skills__icon {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
@@ -368,7 +334,7 @@ body {
     background-color: inherit;
     border: none;
     margin: 1px;
-    font-size: 60px; }
+    font-size: 40px; }
     .skills__icon img {
       -webkit-border-radius: 20px;
       -moz-border-radius: 20px;
@@ -413,7 +379,32 @@ body {
 
 .projects {
   padding-top: 20px;
+  padding-bottom: 50px;
   text-align: center; }
+  .projects h2 {
+    margin-bottom: 30px; }
+  .projects .github-Btn, .projects footer .foot__social button, footer .foot__social .projects button {
+    margin: 10px;
+    height: 80px;
+    width: 150px;
+    outline: none;
+    cursor: pointer;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    border-radius: 15px;
+    position: relative; }
+    .projects .github-Btn:hover, .projects footer .foot__social button:hover, footer .foot__social .projects button:hover {
+      opacity: 0.5; }
+    .projects .github-Btn img, .projects footer .foot__social button img, footer .foot__social .projects button img {
+      width: 100%;
+      height: 100%; }
+    .projects .github-Btn a, .projects footer .foot__social button a, footer .foot__social .projects button a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
   .projects__container {
     display: -webkit-flex;
     -moz-flex: flex;
@@ -442,9 +433,7 @@ body {
         height: 300px;
         object-fit: cover;
         object-position: 0% 0%; }
-    .projects__container .paperRockImg {
-      object-position: center; }
-    .projects__container .kanbanImg {
+    .projects__container .imgCenter {
       object-position: center; }
     .projects__container--card {
       width: 300px;
@@ -452,17 +441,9 @@ body {
       padding: 30px 0;
       background-color: #141414;
       color: #FFFFFF; }
-      .projects__container--card .mobile-icon {
-        display: none;
-        height: 35px;
-        width: 35px;
-        margin: 5px;
-        text-align: center;
-        font-size: 25px; }
-        .projects__container--card .mobile-icon .icon {
-          height: 100%;
-          width: 100%;
-          display: block; }
+      .projects__container--card h4 {
+        line-height: 50px;
+        margin-bottom: 30px; }
       .projects__container--card .btn__card {
         display: block;
         margin: 10px; }
@@ -487,7 +468,7 @@ body {
         right: 0;
         bottom: 0;
         left: 0; }
-  .projects .layer__icon {
+  .projects .layer__link {
     position: absolute;
     top: 0;
     display: -webkit-flex;
@@ -513,7 +494,7 @@ body {
     -moz-transition: 1s;
     -ms-transition: 1s;
     transition: 1s; }
-    .projects .layer__icon:hover {
+    .projects .layer__link:hover {
       position: absolute;
       top: 0;
       display: -webkit-flex;
@@ -535,30 +516,10 @@ body {
       width: 100%;
       height: 100%;
       opacity: 0.9; }
-    .projects .layer__icon .icon {
-      font-size: 20px;
-      padding: 5px;
-      margin: 2px;
-      text-align: center; }
-      .projects .layer__icon .icon:before {
-        height: 100%;
-        width: 100%;
-        display: -webkit-flex;
-        -moz-flex: flex;
-        -ms-flex: flex;
-        display: flex;
-        -webkit-justify-content: center;
-        -moz-justify-content: center;
-        -ms-justify-content: center;
-        justify-content: center;
-        -webkit-align-items: center;
-        -moz-align-items: center;
-        -ms-align-items: center;
-        align-items: center; }
 
 footer {
   background-color: #1A1A1C;
-  margin-top: 300px; }
+  margin-top: 700px; }
   footer .foot__contact {
     padding: 20px 20px; }
     footer .foot__contact label {
@@ -576,21 +537,12 @@ footer {
       font-size: 20px;
       color: #34821A; }
     footer .foot__social button {
-      margin: 10px;
-      height: 80px;
-      width: 150px;
-      outline: none;
-      cursor: pointer;
       -webkit-border-radius: 15px;
       -moz-border-radius: 15px;
       -ms-border-radius: 15px;
-      border-radius: 15px;
-      position: relative; }
+      border-radius: 15px; }
       footer .foot__social button:hover {
         opacity: 0.5; }
-      footer .foot__social button img {
-        width: 100%;
-        height: 100%; }
       footer .foot__social button a {
         position: absolute;
         top: 0;
