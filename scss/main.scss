@@ -388,7 +388,7 @@ body {
 	h2 {
 		margin-bottom: 30px;
 	}
-	.github-Btn {
+	.link-Btn {
 		margin: 10px;
 		height: 80px;
 		width: 150px;
@@ -520,8 +520,13 @@ footer {
 				color: $homeheader-color;
 			}
 			button {
-				@extend .github-Btn;
-				@include border-radius(15px); 
+				margin: 10px;
+				height: 80px;
+				width: 180px;
+				outline: none;
+				cursor: pointer;
+				@include border-radius(15px);
+				position: relative; 
 
 				&:hover {
 					opacity: 0.5;
