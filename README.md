@@ -4,7 +4,7 @@ I present my portfolio, you can find some information about me and my projects. 
 
 [Live version](https://goldyga.github.io/Portfolio/)
 
-![alt text](https://github.com/Goldyga/miniapp_Country-Search/blob/master/imageMin/Country.png?raw=true)
+![alt text](https://github.com/Goldyga/Portfolio/blob/master/imageMin/Portfolio.png?raw=true)
 
 ## Used
 * HTLM
